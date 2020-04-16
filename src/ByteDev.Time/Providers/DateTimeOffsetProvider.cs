@@ -1,20 +1,20 @@
 ﻿using System;
 
-namespace ByteDev.Time
+namespace ByteDev.Time.Providers
 {
     /// <summary>
     /// Provides a way to get <see cref="T:System.DateTimeOffset" /> through an interface.
     /// </summary>
-    public interface IDateTimeOffsetProvider
+    public class DateTimeOffsetProvider : IDateTimeOffsetProvider
     {
         /// <summary>
         /// Returns <see cref="T:System.DateTimeOffset" />.Now.
         /// </summary>
-        DateTimeOffset Now { get; }
-
+        public DateTimeOffset Now => DateTimeOffset.Now;
+        
         /// <summary>
         /// Returns <see cref="T:System.DateTimeOffset" />.UtcNow.
         /// </summary>
-        DateTimeOffset UtcNow { get; }
+        public DateTimeOffset UtcNow => DateTimeOffset.UtcNow;
     }
 }

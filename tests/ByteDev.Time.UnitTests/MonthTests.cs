@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace ByteDev.Time.UnitTests
 {
     [TestFixture]
-    public class MonthTest
+    public class MonthTests
     {
         [TestFixture]
         public class Constructor

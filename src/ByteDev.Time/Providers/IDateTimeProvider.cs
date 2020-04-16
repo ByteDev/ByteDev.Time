@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ByteDev.Time
+namespace ByteDev.Time.Providers
 {
     /// <summary>
     /// Provides a way to get <see cref="T:System.DateTime" /> through an interface.
