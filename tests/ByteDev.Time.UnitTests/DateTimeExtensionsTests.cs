@@ -52,21 +52,6 @@ namespace ByteDev.Time.UnitTests
         }
 
         [TestFixture]
-        public class SubtractWeeks
-        {
-            [Test]
-            public void WhenWeeksIsOne_ThenSubtractOneWeekFromDate()
-            {
-                var expected = new DateTime(2000, 1, 10);
-                var sut = new DateTime(2000, 1, 17);
-
-                var result = sut.SubtractWeeks(1);
-
-                Assert.That(result, Is.EqualTo(expected));
-            }
-        }
-
-        [TestFixture]
         public class AddWeeks
         {
             [Test]

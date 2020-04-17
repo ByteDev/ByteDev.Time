@@ -41,8 +41,15 @@ Extension methods:
 - DateTime
   - GetDayAsOrdinal
   - AddWeeks
+  - SubtractYears
+  - SubtractMonths
   - SubtractWeeks
-  - DaysInMonth
+  - SubtractDays
+  - SubtractHours
+  - SubtractMinutes
+  - SubtractSeconds
+  - SubtractMilliseconds
+  - MonthLength
   - WithYear
   - WithMonth
   - WithDay

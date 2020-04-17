@@ -45,17 +45,6 @@ namespace ByteDev.Time
         }
 
         /// <summary>
-        /// Returns a new <see cref="T:System.DateTime" /> with the number of weeks subtracted.
-        /// </summary>
-        /// <param name="source">The <see cref="T:System.DateTime" /> to subtract the weeks from.</param>
-        /// <param name="numberOfWeeks">Number of weeks to subtract.</param>
-        /// <returns>The new <see cref="T:System.DateTime" /> with the number of weeks subtracted.</returns>
-        public static DateTime SubtractWeeks(this DateTime source, int numberOfWeeks)
-        {
-            return source.AddDays(-1 * DaysInWeek * numberOfWeeks);
-        }
-
-        /// <summary>
         /// Returns the days in the curren month.
         /// </summary>
         /// <param name="source">The <see cref="T:System.DateTime" /> to use.</param>
