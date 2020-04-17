@@ -60,27 +60,22 @@ namespace ByteDev.Time
         }
 
         /// <summary>
-        /// Determines if <paramref name="source" /> is between <paramref name="startDateTime" /> and <paramref name="endDateTime" />.
+        /// Determines if <paramref name="source" /> is between <paramref name="start" /> and <paramref name="end" />.
         /// </summary>
         /// <param name="source">The <see cref="T:System.DateTime" /> to check.</param>
-        /// <param name="startDateTime">The start <see cref="T:System.DateTime" />.</param>
-        /// <param name="endDateTime">The end <see cref="T:System.DateTime" />.</param>
-        /// <param name="compareTime">True compares the full date time; False compares only the date part.</param>
+        /// <param name="start">The start <see cref="T:System.DateTime" />.</param>
+        /// <param name="end">The end <see cref="T:System.DateTime" />.</param>
+        /// <param name="ignoreTimePart">True compares only the date part; otherwise compares the full date time.</param>
         /// <returns>True if <paramref name="source" /> is between; otherwise returns false.</returns>
-        /// <exception cref="T:System.ArgumentException">End must be equal to or before start.</exception>
-        public static bool IsBetween(this DateTime source, DateTime startDateTime, DateTime endDateTime, bool compareTime = true)
+        /// <exception cref="T:System.ArgumentException">Start must be equal to or before end.</exception>
+        public static bool IsBetween(this DateTime source, DateTime start, DateTime end, bool ignoreTimePart = false)
         {
-            if (startDateTime > endDateTime)
+            if (ignoreTimePart)
             {
-                throw new ArgumentException("End must be equal to or before start.");
+                return new DateRange(start, end).IsInRange(source);
             }
 
-            if (compareTime)
-            {
-                return source >= startDateTime && source <= endDateTime;
-            }
-            
-            return source.Date >= startDateTime.Date && source.Date <= endDateTime.Date;
+            return new DateTimeRange(start, end).IsInRange(source);
         }
 
         /// <summary>

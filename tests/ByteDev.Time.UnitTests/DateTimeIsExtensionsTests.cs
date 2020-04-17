@@ -202,31 +202,31 @@ namespace ByteDev.Time.UnitTests
 
 
             [Test]
-            public void WhenCompareDateOnly_AndIsEqualToStartAndEnd_ThenReturnTrue()
+            public void WhenIgnoreTimePart_AndIsEqualToStartAndEnd_ThenReturnTrue()
             {
                 var sut = new DateTime(2020, 1, 10);
 
-                var result = sut.IsBetween(sut, sut, false);
+                var result = sut.IsBetween(sut, sut, true);
 
                 Assert.That(result, Is.True);
             }
 
             [Test]
-            public void WhenCompareDateOnly_AndIsBetween_ThenReturnTrue()
+            public void WhenIgnoreTimePart_AndIsBetween_ThenReturnTrue()
             {
                 var sut = new DateTime(2020, 1, 10);
 
-                var result = sut.IsBetween(new DateTime(2020, 1, 9), new DateTime(2020, 1, 11), false);
+                var result = sut.IsBetween(new DateTime(2020, 1, 9), new DateTime(2020, 1, 11), true);
 
                 Assert.That(result, Is.True);
             }
 
             [Test]
-            public void WhenCompareDateOnly_AndIsBetween_ThenReturnFalse()
+            public void WhenIgnoreTimePart_AndIsBetween_ThenReturnFalse()
             {
                 var sut = new DateTime(2020, 1, 10);
 
-                var result = sut.IsBetween(new DateTime(2020, 1, 11), new DateTime(2020, 1, 12), false);
+                var result = sut.IsBetween(new DateTime(2020, 1, 11), new DateTime(2020, 1, 12), true);
 
                 Assert.That(result, Is.False);
             }
