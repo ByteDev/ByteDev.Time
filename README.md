@@ -1,4 +1,5 @@
 [![NuGet Package](https://img.shields.io/nuget/v/ByteDev.Time.svg)](https://www.nuget.org/packages/ByteDev.Time)
+[![Build status](https://ci.appveyor.com/api/projects/status/github/ByteDev/ByteDev.Time?branch=master&svg=true)](https://ci.appveyor.com/project/ByteDev/ByteDev.Time/branch/master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/ByteDev/ByteDev.Template.LibraryPackage/blob/master/LICENSE)
 
 # ByteDev.Time
