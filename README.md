@@ -51,6 +51,7 @@ Extension methods:
   - IsAfter
   - IsBefore
   - IsBetween
+  - IsMonth
   - ToStringDateDayShort
   - ToStringDateDayLong
   - ToStringDayOnly

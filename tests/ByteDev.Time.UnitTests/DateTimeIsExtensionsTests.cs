@@ -231,5 +231,39 @@ namespace ByteDev.Time.UnitTests
                 Assert.That(result, Is.False);
             }
         }
+
+        [TestFixture]
+        public class IsMonth
+        {
+            private DateTime _sut;
+
+            [SetUp]
+            public void SetUp()
+            {
+                _sut = new DateTime(2020, 1, 1);
+            }
+
+            [Test]
+            public void WhenIsMonth_ThenReturnTrue()
+            {
+                var result = _sut.IsMonth(Month.January);
+
+                Assert.That(result, Is.True);
+            }
+
+            [Test]
+            public void WhenIsNotMonth_ThenReturnFalse()
+            {
+                var result = _sut.IsMonth(Month.February);
+
+                Assert.That(result, Is.False);
+            }
+
+            [Test]
+            public void WhenMonthIsNotDefined_ThenThrowException()
+            {
+                Assert.Throws<ArgumentException>(() => _sut.IsMonth((Month)13));
+            }
+        }
     }
 }

@@ -81,5 +81,22 @@ namespace ByteDev.Time
             
             return source.Date >= startDateTime.Date && source.Date <= endDateTime.Date;
         }
+
+        /// <summary>
+        /// Determines if <paramref name="source" /> is a particular month.
+        /// </summary>
+        /// <param name="source">The <see cref="T:System.DateTime" /> to check.</param>
+        /// <param name="month">Month to check.</param>
+        /// <returns>True if is the <paramref name="month" />; otherwise returns false.</returns>
+        /// <exception cref="T:System.ArgumentException"><paramref name="month" /> is not defined.</exception>
+        public static bool IsMonth(this DateTime source, Month month)
+        {
+            if (!Enum.IsDefined(typeof(Month), month))
+            {
+                throw new ArgumentException($"No {typeof(Month)} defined for value: '{month}'.", nameof(month));
+            }
+
+            return source.Month == (int) month;
+        }
     }
 }
