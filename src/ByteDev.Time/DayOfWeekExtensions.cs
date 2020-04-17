@@ -12,7 +12,7 @@ namespace ByteDev.Time
         /// </summary>
         /// <param name="source">The day of the week.</param>
         /// <returns>Short representation of the day of the week.</returns>
-        /// <exception cref="T:System.ArgumentException"><paramref name="source" />Value is not defined.</exception>
+        /// <exception cref="T:System.ArgumentException"><paramref name="source" /> is not defined.</exception>
         public static string ToStringShort(this DayOfWeek source)
         {
             if (!Enum.IsDefined(typeof(DayOfWeek), source))

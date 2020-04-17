@@ -67,6 +67,7 @@ namespace ByteDev.Time
         /// <param name="endDateTime">The end <see cref="T:System.DateTime" />.</param>
         /// <param name="compareTime">True compares the full date time; False compares only the date part.</param>
         /// <returns>True if <paramref name="source" /> is between; otherwise returns false.</returns>
+        /// <exception cref="T:System.ArgumentException">End must be equal to or before start.</exception>
         public static bool IsBetween(this DateTime source, DateTime startDateTime, DateTime endDateTime, bool compareTime = true)
         {
             if (startDateTime > endDateTime)
