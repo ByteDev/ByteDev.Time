@@ -35,6 +35,8 @@ The package has the following types and extension methods:
 Types:
 - DateTimeProvider (IDateTimeProvider)
 - DateTimeOffsetProvider (IDateTimeOffsetProvider)
+- DateTimeRange
+- DateRange
 - Month
 
 Extension methods:
@@ -64,9 +66,10 @@ Extension methods:
   - ToStringDateDayLong
   - ToStringDayOnly
   - ToStringSortable
-  - TruncateToSecond
-  - TruncateToMinute
+  - TruncateToDay
   - TruncateToHour
+  - TruncateToMinute  
+  - TruncateToSecond   
 - DayOfWeek
   - ToStringShort
 - Month
