@@ -80,5 +80,77 @@ namespace ByteDev.Time.UnitTests
                 Assert.That(result, Is.EqualTo(expected));
             }
         }
+
+        [TestFixture]
+        public class MonthLength
+        {
+            [Test]
+            public void WhenIsJan_ThenReturnLastDay()
+            {
+                var sut = new DateTime(2020, 1, 1);
+
+                var result = sut.MonthLength();
+
+                Assert.That(result, Is.EqualTo(31));
+            }
+
+            [Test]
+            public void WhenIsFebInLeapYear_ThenReturnLastDay()
+            {
+                var sut = new DateTime(2020, 2, 1);
+                
+                var result = sut.MonthLength();
+
+                Assert.That(result, Is.EqualTo(29));
+            }
+        }
+
+        [TestFixture]
+        public class WithYear
+        {
+            [Test]
+            public void WhenCalled_ThenReturnsWithNewYear()
+            {
+                var expected = new DateTime(2020, 1, 10, 23, 59, 30);
+
+                var sut = new DateTime(2020, 1, 2, 23, 59, 30);
+
+                var result = sut.WithDay(expected.Day);
+
+                Assert.That(result, Is.EqualTo(expected));
+            }
+        }
+
+        [TestFixture]
+        public class WithMonth
+        {
+            [Test]
+            public void WhenCalled_ThenReturnsWithNewMonth()
+            {
+                var expected = new DateTime(2020, 10, 2, 23, 59, 30);
+
+                var sut = new DateTime(2020, 1, 2, 23, 59, 30);
+
+                var result = sut.WithMonth(expected.Month);
+
+                Assert.That(result, Is.EqualTo(expected));
+            }
+        }
+
+        [TestFixture]
+        public class WithDay
+        {
+            [Test]
+            public void WhenCalled_ThenReturnsWithNewDay()
+            {
+                var expected = new DateTime(2020, 1, 10, 23, 59, 30);
+
+                var sut = new DateTime(2020, 1, 2, 23, 59, 30);
+
+                var result = sut.WithDay(expected.Day);
+
+                Assert.That(result, Is.EqualTo(expected));
+            }
+        }
     }
 }

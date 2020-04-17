@@ -41,9 +41,16 @@ Extension methods:
   - GetDayAsOrdinal
   - AddWeeks
   - SubtractWeeks
+  - DaysInMonth
+  - WithYear
+  - WithMonth
+  - WithDay
   - IsLastDayOfTheMonth
   - IsWeekend
   - IsLeapYear
+  - IsAfter
+  - IsBefore
+  - IsBetween
   - ToStringDateDayShort
   - ToStringDateDayLong
   - ToStringDayOnly
