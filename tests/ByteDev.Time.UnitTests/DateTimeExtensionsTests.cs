@@ -111,11 +111,11 @@ namespace ByteDev.Time.UnitTests
             [Test]
             public void WhenCalled_ThenReturnsWithNewYear()
             {
-                var expected = new DateTime(2020, 1, 10, 23, 59, 30);
+                var expected = new DateTime(2021, 1, 2, 23, 59, 30);
 
                 var sut = new DateTime(2020, 1, 2, 23, 59, 30);
 
-                var result = sut.WithDay(expected.Day);
+                var result = sut.WithYear(expected.Year);
 
                 Assert.That(result, Is.EqualTo(expected));
             }
