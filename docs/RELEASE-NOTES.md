@@ -8,6 +8,7 @@ Breaking changes:
 New features:
 - Added DateTimeRange
 - Added DateRange
+- Added DateTimeExtensions Subtract methods
 
 Bug fixes:
 - Fixed public comments for IsBetween method
