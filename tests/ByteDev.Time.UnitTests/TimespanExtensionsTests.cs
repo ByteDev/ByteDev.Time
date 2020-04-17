@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace ByteDev.Time.UnitTests
 {
     [TestFixture]
-    public class TimespanExtensionsTests
+    public class TimeSpanExtensionsTests
     {
         [TestFixture]
         public class ToApproxFormat

@@ -5,7 +5,7 @@ namespace ByteDev.Time
     /// <summary>
     /// Extension methods for <see cref="T:System.TimeSpan" />.
     /// </summary>
-    public static class TimespanExtensions
+    public static class TimeSpanExtensions
     {
         /// <summary>
         /// Returns a text approximate representation of the <see cref="T:System.TimeSpan" />. 

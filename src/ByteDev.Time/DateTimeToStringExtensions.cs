@@ -8,7 +8,7 @@ namespace ByteDev.Time
     public static class DateTimeToStringExtensions
     {
         /// <summary>
-        /// Returns the <see cref="T:System.DateTime" /> in the example format: Wed 31st December 2014.
+        /// Returns the <see cref="T:System.DateTime" /> in the format: Wed 31st December 2014.
         /// </summary>
         /// <param name="source">The <see cref="T:System.DateTime" /> to return as a string.</param>
         /// <returns>String representing the <see cref="T:System.DateTime" />.</returns>
@@ -38,7 +38,7 @@ namespace ByteDev.Time
         }
 
         /// <summary>
-        /// Returns the <see cref="T:System.DateTime" /> in a sortable format.
+        /// Returns the <see cref="T:System.DateTime" /> in the format: yyyyMMddhhmmss.
         /// </summary>
         /// <param name="source">The <see cref="T:System.DateTime" /> to return as a string.</param>
         /// <returns>String representing the <see cref="T:System.DateTime" />.</returns>
@@ -48,10 +48,10 @@ namespace ByteDev.Time
         }
 
         /// <summary>
-        /// Returns the <see cref="T:System.DateTime" /> in a sortable format.
+        /// Returns the <see cref="T:System.DateTime" /> in the format: yyyyMMddhhmmss.
         /// </summary>
         /// <param name="source">The <see cref="T:System.DateTime" /> to return as a string.</param>
-        /// <param name="delimiter">Optional delimiter string between <see cref="T:System.DateTime" /> parts.</param>
+        /// <param name="delimiter">Delimiter string between <see cref="T:System.DateTime" /> parts.</param>
         /// <returns>String representing the <see cref="T:System.DateTime" />.</returns>
         public static string ToStringSortable(this DateTime source, string delimiter)
         {

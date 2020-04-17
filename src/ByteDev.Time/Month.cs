@@ -1,5 +1,8 @@
 ﻿namespace ByteDev.Time
 {
+    /// <summary>
+    /// Represents a month in the year.
+    /// </summary>
     public enum Month
     {
         January = 1,
