@@ -9,6 +9,7 @@ New features:
 - Added DateTimeRange
 - Added DateRange
 - Added DateTimeExtensions Subtract methods
+- Added DateTimeExtensions TruncateToDay
 
 Bug fixes:
 - Fixed public comments for IsBetween method

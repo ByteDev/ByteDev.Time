@@ -8,14 +8,25 @@ namespace ByteDev.Time
     public static class DateTimeTruncateExtensions
     {
         /// <summary>
-        /// Returns a new <see cref="T:System.DateTime" /> truncated to the second.
-        /// Any milliseconds will be set to zero. 
+        /// Returns a new <see cref="T:System.DateTime" /> truncated to the day.
+        /// Any hours, minutes, seconds and milliseconds will be set to zero. 
         /// </summary>
         /// <param name="source">The <see cref="T:System.DateTime" /> to truncate.</param>
-        /// <returns>New <see cref="T:System.DateTime" /> truncated to the second.</returns>
-        public static DateTime TruncateToSecond(this DateTime source)
+        /// <returns>New <see cref="T:System.DateTime" /> truncated to the day.</returns>
+        public static DateTime TruncateToDay(this DateTime source)
         {
-            return Truncate(source, TimeSpan.FromSeconds(1));
+            return Truncate(source, TimeSpan.FromDays(1));
+        }
+
+        /// <summary>
+        /// Returns a new <see cref="T:System.DateTime" /> truncated to the hour.
+        /// Any minutes, seconds and milliseconds will be set to zero. 
+        /// </summary>
+        /// <param name="source">The <see cref="T:System.DateTime" /> to truncate.</param>
+        /// <returns>New <see cref="T:System.DateTime" /> truncated to the hour.</returns>
+        public static DateTime TruncateToHour(this DateTime source)
+        {
+            return Truncate(source, TimeSpan.FromHours(1));
         }
 
         /// <summary>
@@ -30,14 +41,14 @@ namespace ByteDev.Time
         }
 
         /// <summary>
-        /// Returns a new <see cref="T:System.DateTime" /> truncated to the hour.
-        /// Any minutes, seconds and milliseconds will be set to zero. 
+        /// Returns a new <see cref="T:System.DateTime" /> truncated to the second.
+        /// Any milliseconds will be set to zero. 
         /// </summary>
         /// <param name="source">The <see cref="T:System.DateTime" /> to truncate.</param>
-        /// <returns>New <see cref="T:System.DateTime" /> truncated to the hour.</returns>
-        public static DateTime TruncateToHour(this DateTime source)
+        /// <returns>New <see cref="T:System.DateTime" /> truncated to the second.</returns>
+        public static DateTime TruncateToSecond(this DateTime source)
         {
-            return Truncate(source, TimeSpan.FromHours(1));
+            return Truncate(source, TimeSpan.FromSeconds(1));
         }
 
         private static DateTime Truncate(DateTime source, TimeSpan timeSpan)
