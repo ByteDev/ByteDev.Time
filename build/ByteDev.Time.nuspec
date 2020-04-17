@@ -9,7 +9,7 @@
     <copyright>Copyright 2020</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET standard library of time related types and extension methods.</description>
-    <tags>time datetime timespan extensions</tags>
+    <tags>datetime date time timespan extensions year month week day hour minute second millisecond</tags>
     <iconUrl>https://raw.githubusercontent.com/bytedev/ByteDev.Time/master/images/icon.png</iconUrl>
     <dependencies>
       <group targetFramework=".NETStandard2.0" />
