@@ -18,7 +18,7 @@ New features:
 - Added TimeMax
 
 Bug fixes / internal changes:
-- (None)
+- Updated nuspec details
 
 ## 1.2.0 - 17 April 2020
 

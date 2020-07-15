@@ -10,7 +10,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET standard library of time related types and extension methods.</description>
     <tags>datetime date time timespan extensions year month week day hour minute second millisecond</tags>
-    <iconUrl>https://raw.githubusercontent.com/bytedev/ByteDev.Time/master/images/icon.png</iconUrl>
+    <projectUrl>https://github.com/ByteDev/ByteDev.Time</projectUrl>
+    <icon>images\icon.png</icon>
+    <license type="file">LICENSE</license>
     <dependencies>
       <group targetFramework=".NETStandard2.0" />
     </dependencies>
@@ -18,5 +20,7 @@
   <files>
     <file src="..\src\ByteDev.Time\bin\Release\netstandard2.0\ByteDev.Time.dll" target="lib\netstandard2.0" />
     <file src="..\src\ByteDev.Time\bin\Release\netstandard2.0\ByteDev.Time.xml" target="lib\netstandard2.0" />
+    <file src="..\images\icon.png" target="images\" />
+    <file src="..\LICENSE*" target="" />
   </files>
 </package>
