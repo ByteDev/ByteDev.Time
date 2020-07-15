@@ -38,11 +38,17 @@ Types:
 - DateTimeRange
 - DateRange
 - Month
+- TimeMax
 
 Extension methods:
 - DateTime
-  - GetDayAsOrdinal
   - AddWeeks
+  - EndOfDay
+  - EndOfMonth
+  - EndOfYear
+  - EqualsDate
+  - EqualsTime
+  - GetDayAsOrdinal
   - SubtractYears
   - SubtractMonths
   - SubtractWeeks
@@ -55,6 +61,10 @@ Extension methods:
   - WithYear
   - WithMonth
   - WithDay
+  - WithHour
+  - WithMinute
+  - WithSecond
+  - WithMillisecond
   - IsLastDayOfTheMonth
   - IsWeekend
   - IsLeapYear
