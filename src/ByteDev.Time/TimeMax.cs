@@ -1,4 +1,4 @@
-﻿namespace ByteDev.Time.UnitTests
+﻿namespace ByteDev.Time
 {
     public static class TimeMax
     {

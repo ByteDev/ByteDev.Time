@@ -45,7 +45,7 @@ namespace ByteDev.Time
         }
 
         /// <summary>
-        /// Returns the days in the curren month.
+        /// Returns the days in the month.
         /// </summary>
         /// <param name="source">The <see cref="T:System.DateTime" /> to use.</param>
         /// <returns>Number of days in the month of <paramref name="source" />.</returns>

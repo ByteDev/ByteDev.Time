@@ -1,5 +1,16 @@
 # Release Notes
 
+## 2.0.0 - 15 July 2020
+
+Breaking changes:
+- TimeMax now in correct NS
+
+New features:
+- Added MonthExtensions.Length
+
+Bug fixes / internal changes:
+- (None)
+
 ## 1.3.0 - 15 July 2020
 
 Breaking changes:

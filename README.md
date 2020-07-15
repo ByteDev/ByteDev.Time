@@ -78,5 +78,6 @@ Extension methods:
   - ToStringShort
 - Month
   - ToStringShort
+  - Length
 - TimeSpan
   - ToApproxFormat

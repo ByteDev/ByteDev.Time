@@ -21,9 +21,9 @@ namespace ByteDev.Time.UnitTests
             [TestCase(Month.October, "Oct")]
             [TestCase(Month.November, "Nov")]
             [TestCase(Month.December, "Dec")]
-            public void WhenIsDefined_ThenReturnCorrectString(Month month, string expected)
+            public void WhenIsDefined_ThenReturnCorrectString(Month sut, string expected)
             {
-                var result = month.ToStringShort();
+                var result = sut.ToStringShort();
 
                 Assert.That(result, Is.EqualTo(expected));
             }
@@ -32,6 +32,31 @@ namespace ByteDev.Time.UnitTests
             public void WhenIsNotDefined_ThenThrowException()
             {
                 Assert.Throws<ArgumentException>(() => ((Month)13).ToStringShort());
+            }
+        }
+
+        [TestFixture]
+        public class Length
+        {
+            [TestCase(Month.January, 2020, 31)]
+            [TestCase(Month.February, 2020, 29)]
+            [TestCase(Month.February, 2021, 28)]
+            [TestCase(Month.March, 2020, 31)]
+            [TestCase(Month.April, 2020, 30)]
+            [TestCase(Month.May, 2020, 31)]
+            [TestCase(Month.June, 2020, 30)]
+            [TestCase(Month.July, 2020, 31)]
+            [TestCase(Month.August, 2020, 31)]
+            [TestCase(Month.September, 2020, 30)]
+            [TestCase(Month.October, 2020, 31)]
+            [TestCase(Month.October, 2020, 31)]
+            [TestCase(Month.November, 2020, 30)]
+            [TestCase(Month.December, 2020, 31)]
+            public void WhenIsLeapYear_Then(Month sut, int year, int expected)
+            {
+                var result = sut.Length(year);
+
+                Assert.That(result, Is.EqualTo(expected));
             }
         }
     }
