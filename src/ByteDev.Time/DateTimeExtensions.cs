@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data.Common;
-using ByteDev.Time.UnitTests;
 
 namespace ByteDev.Time
 {
@@ -177,11 +175,25 @@ namespace ByteDev.Time
             return new DateTime(source.Year, 12, 31, 23, 59, 59, 999);
         }
 
+        /// <summary>
+        /// Determines if the date part of <paramref name="date" /> is equal
+        /// to <paramref name="source" />.
+        /// </summary>
+        /// <param name="source">The <see cref="T:System.DateTime" /> to perform the operation on.</param>
+        /// <param name="date">The date to compare.</param>
+        /// <returns>True the date parts are equal; otherwise false.</returns>
         public static bool EqualsDate(this DateTime source, DateTime date)
         {
             return source.Date == date.Date;
         }
 
+        /// <summary>
+        /// Determines if the time part of <paramref name="time" /> is equal
+        /// to <paramref name="source" />.
+        /// </summary>
+        /// <param name="source">The <see cref="T:System.DateTime" /> to perform the operation on.</param>
+        /// <param name="time">The time to compare.</param>
+        /// <returns>True the time parts are equal; otherwise false.</returns>
         public static bool EqualsTime(this DateTime source, DateTime time)
         {
             return source.Hour == time.Hour &&
