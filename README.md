@@ -33,6 +33,7 @@ Types:
 - DateRange
 - Month
 - TimeMax
+- Year
 
 Extension methods:
 - DateTime
