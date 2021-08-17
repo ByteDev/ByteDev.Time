@@ -146,9 +146,10 @@ namespace ByteDev.Time
         /// <returns>Date time set to the last moment of the day.</returns>
         public static DateTime EndOfDay(this DateTime source)
         {
-            return source.Date
+            return source
+                .Date
                 .AddDays(1)
-                .Subtract(CreateMillisecond());
+                .SubtractMillseconds(1);
         }
 
         /// <summary>
@@ -161,7 +162,7 @@ namespace ByteDev.Time
         {
             return new DateTime(source.Year, source.Month, 1)
                 .AddMonths(1)
-                .Subtract(CreateMillisecond());
+                .SubtractMillseconds(1);
         }
 
         /// <summary>
@@ -200,11 +201,6 @@ namespace ByteDev.Time
                    source.Minute == time.Minute &&
                    source.Second == time.Second &&
                    source.Millisecond == time.Millisecond;
-        }
-
-        private static TimeSpan CreateMillisecond()
-        {
-            return new TimeSpan(0, 0, 0, 0, 1);
         }
     }
 }

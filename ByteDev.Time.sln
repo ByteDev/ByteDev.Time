@@ -20,8 +20,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{3F9A73C8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteDev.Time", "src\ByteDev.Time\ByteDev.Time.csproj", "{4885C26C-08F7-477F-976A-8BCC86DDAF64}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{B3628ACA-D0D3-4DB5-ADE9-D9F64BF8937F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteDev.Time.UnitTests", "tests\ByteDev.Time.UnitTests\ByteDev.Time.UnitTests.csproj", "{6263194A-4250-4CDD-85E1-DB6187D0159A}"
 EndProject
 Global
@@ -43,8 +41,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B3628ACA-D0D3-4DB5-ADE9-D9F64BF8937F} = {E0485F4D-842B-4F43-A33D-7E3CBA45D310}
-		{6263194A-4250-4CDD-85E1-DB6187D0159A} = {B3628ACA-D0D3-4DB5-ADE9-D9F64BF8937F}
+		{6263194A-4250-4CDD-85E1-DB6187D0159A} = {E0485F4D-842B-4F43-A33D-7E3CBA45D310}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {934609B1-FFDD-479E-AE0A-E3D75790C5F6}
