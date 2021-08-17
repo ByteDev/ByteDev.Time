@@ -53,6 +53,8 @@ Extension methods:
   - SubtractSeconds
   - SubtractMilliseconds
   - MonthLength
+  - WithDate
+  - WithTime
   - WithYear
   - WithMonth
   - WithDay
