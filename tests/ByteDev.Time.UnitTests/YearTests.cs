@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace ByteDev.Time.UnitTests
 {
@@ -6,7 +7,19 @@ namespace ByteDev.Time.UnitTests
     public class YearTests
     {
         [TestFixture]
-        public class IsLeap : YearTests
+        public class Constructor_DateTime
+        {
+            [Test]
+            public void WhenCalled_ThenSetsYear()
+            {
+                var sut = new Year(new DateTime(2022, 1, 1));
+
+                Assert.That(sut.Value, Is.EqualTo(2022));
+            }
+        }
+
+        [TestFixture]
+        public class IsLeap
         {
             [TestCase(2028)]
             [TestCase(2024)]
@@ -40,7 +53,7 @@ namespace ByteDev.Time.UnitTests
         }
 
         [TestFixture]
-        public class Decade : YearTests
+        public class Decade
         {
             [TestCase(-1000)]
             [TestCase(-100)]
@@ -71,7 +84,7 @@ namespace ByteDev.Time.UnitTests
         }
 
         [TestFixture]
-        public class Century : YearTests
+        public class Century
         {
             [TestCase(-99)]
             [TestCase(-1)]
@@ -100,7 +113,7 @@ namespace ByteDev.Time.UnitTests
         }
 
         [TestFixture]
-        public class Millennium : YearTests
+        public class Millennium
         {
             [TestCase(-999)]
             [TestCase(-1)]
@@ -128,7 +141,7 @@ namespace ByteDev.Time.UnitTests
         }
 
         [TestFixture]
-        public class ToStringOverride : YearTests
+        public class ToStringOverride
         {
             [Test]
             public void WhenCalled_ThenReturnsYear()

@@ -1,5 +1,16 @@
 # Release Notes
 
+## 2.3.0 - ?
+
+Breaking changes:
+- (None)
+
+New features:
+- Added constructor overload to `Year`.
+
+Bug fixes / internal changes:
+- (None)
+
 ## 2.2.0 - 17 August 2021
 
 Breaking changes:

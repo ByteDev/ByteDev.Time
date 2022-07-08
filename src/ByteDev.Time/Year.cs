@@ -32,7 +32,15 @@ namespace ByteDev.Time
         /// Year value.
         /// </summary>
         public int Value { get; }
-        
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:ByteDev.Time.Year" /> struct.
+        /// </summary>
+        /// <param name="dateTime">Date time for the year.</param>
+        public Year(DateTime dateTime) : this(dateTime.Year)
+        {
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="T:ByteDev.Time.Year" /> struct.
         /// </summary>
