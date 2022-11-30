@@ -1,12 +1,13 @@
 # Release Notes
 
-## 2.3.0 - ?
+## 2.3.0 - 30 November 2022
 
 Breaking changes:
 - (None)
 
 New features:
 - Added constructor overload to `Year`.
+- Added `DateTimeProvider.NowByTimeZoneId` method.
 
 Bug fixes / internal changes:
 - (None)
