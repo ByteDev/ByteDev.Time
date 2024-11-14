@@ -13,7 +13,9 @@
     <projectUrl>https://github.com/ByteDev/ByteDev.Time</projectUrl>
     <icon>images\icon.png</icon>
     <license type="file">LICENSE</license>
-    <dependencies>
+	<releaseNotes>Refer to https://github.com/ByteDev/ByteDev.Time/blob/master/docs/RELEASE-NOTES.md on GitHub.</releaseNotes>
+	<readme>README.md</readme>
+	<dependencies>
       <group targetFramework=".NETStandard2.0" />
     </dependencies>
   </metadata>
@@ -22,5 +24,6 @@
     <file src="..\src\ByteDev.Time\bin\Release\netstandard2.0\ByteDev.Time.xml" target="lib\netstandard2.0" />
     <file src="..\images\icon.png" target="images\" />
     <file src="..\LICENSE*" target="" />
+    <file src="..\README.md" target="" />
   </files>
 </package>
