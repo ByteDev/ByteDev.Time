@@ -265,5 +265,33 @@ namespace ByteDev.Time.UnitTests
                 Assert.Throws<ArgumentException>(() => _sut.IsMonth((Month)13));
             }
         }
+
+        [TestFixture]
+        public class IsUtc
+        {
+            [Test]
+            public void WhenIsUtc_ThenReturnTrue()
+            {
+                var result = DateTime.UtcNow.IsUtc();
+
+                Assert.That(result, Is.True);
+            }
+
+            [Test]
+            public void WhenIsNotUtc_ThenReturnFalse()
+            {
+                var result = DateTime.Now.IsUtc();
+
+                Assert.That(result, Is.False);
+            }
+
+            [Test]
+            public void WhenIsDefaultCtor_ThenReturnFalse()
+            {
+                var result = new DateTime().IsUtc();
+
+                Assert.That(result, Is.False);
+            }
+        }
     }
 }

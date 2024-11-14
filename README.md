@@ -31,56 +31,58 @@ Types:
 - DateTimeOffsetProvider (IDateTimeOffsetProvider)
 - DateTimeRange
 - DateRange
-- Month
+- Month (enum)
 - TimeMax
 - Year
 
 Extension methods:
 - DateTime
-  - AddWeeks
-  - EndOfDay
-  - EndOfMonth
-  - EndOfYear
-  - EqualsDate
-  - EqualsTime
-  - GetDayAsOrdinal
-  - SubtractYears
-  - SubtractMonths
-  - SubtractWeeks
-  - SubtractDays
-  - SubtractHours
-  - SubtractMinutes
-  - SubtractSeconds
-  - SubtractMilliseconds
-  - MonthLength
-  - WithDate
-  - WithTime
-  - WithYear
-  - WithMonth
-  - WithDay
-  - WithHour
-  - WithMinute
-  - WithSecond
-  - WithMillisecond
-  - IsLastDayOfTheMonth
-  - IsWeekend
-  - IsLeapYear
-  - IsAfter
-  - IsBefore
-  - IsBetween
-  - IsMonth
-  - ToStringDateDayShort
-  - ToStringDateDayLong
-  - ToStringDayOnly
-  - ToStringSortable
-  - TruncateToDay
-  - TruncateToHour
-  - TruncateToMinute  
-  - TruncateToSecond   
+	- AddWeeks
+	- EndOfDay
+	- EndOfMonth
+	- EndOfYear
+	- EqualsDate
+	- EqualsTime
+	- GetDayAsOrdinal
+	- SubtractYears
+	- SubtractMonths
+	- SubtractWeeks
+	- SubtractDays
+	- SubtractHours
+	- SubtractMinutes
+	- SubtractSeconds
+	- SubtractMilliseconds
+	- MonthLength
+	- WithDate
+	- WithTime
+	- WithYear
+	- WithMonth
+	- WithDay
+	- WithHour
+	- WithMinute
+	- WithSecond
+	- WithMillisecond
+	- IsLastDayOfTheMonth
+	- IsWeekend
+	- IsLeapYear
+	- IsAfter
+	- IsBefore
+	- IsBetween
+	- IsMonth
+	- IsUtc
+	- ToDateTimeOffset
+	- ToStringDateDayShort
+	- ToStringDateDayLong
+	- ToStringDayOnly
+	- ToStringSortable
+	- TruncateToDay
+	- TruncateToHour
+	- TruncateToMinute  
+	- TruncateToSecond   
 - DayOfWeek
-  - ToStringShort
+	- ToStringShort
 - Month
-  - ToStringShort
-  - Length
+	- ToStringShort
+	- Length
 - TimeSpan
-  - ToApproxFormat
+	- ToApproxFormat

@@ -1,5 +1,17 @@
 # Release Notes
 
+## 2.4.0 - ?
+
+Breaking changes:
+- (None)
+
+New features:
+- Added `DateTimeIsExtensions.IsUtc` method.
+- Added `DateTimeToDateTimeOffsetExtensions.ToDateTimeOffset` method.
+
+Bug fixes / internal changes:
+- (None)
+
 ## 2.3.0 - 30 November 2022
 
 Breaking changes:

@@ -71,10 +71,8 @@ namespace ByteDev.Time
         public static bool IsBetween(this DateTime source, DateTime start, DateTime end, bool ignoreTimePart = false)
         {
             if (ignoreTimePart)
-            {
                 return new DateRange(start, end).IsInRange(source);
-            }
-
+  
             return new DateTimeRange(start, end).IsInRange(source);
         }
 
@@ -88,11 +86,19 @@ namespace ByteDev.Time
         public static bool IsMonth(this DateTime source, Month month)
         {
             if (!Enum.IsDefined(typeof(Month), month))
-            {
                 throw new ArgumentException($"No {typeof(Month)} defined for value: '{month}'.", nameof(month));
-            }
 
             return source.Month == (int) month;
+        }
+
+        /// <summary>
+        /// Determines if <paramref name="source" /> is set to a UTC date time.
+        /// </summary>
+        /// <param name="source">The <see cref="T:System.DateTime" /> to check.</param>
+        /// <returns>True if UTC; otherwise false.</returns>
+        public static bool IsUtc(this DateTime source)
+        {
+            return source.Kind == DateTimeKind.Utc;
         }
     }
 }
