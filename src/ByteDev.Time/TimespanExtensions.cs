@@ -8,11 +8,11 @@ namespace ByteDev.Time
     public static class TimeSpanExtensions
     {
         /// <summary>
-        /// Returns a text approximate representation of the <see cref="T:System.TimeSpan" />. 
+        /// Returns a text approximate description of the <see cref="T:System.TimeSpan" />. 
         /// </summary>
         /// <param name="source">The <see cref="T:System.TimeSpan" /> to get the approximate text from.</param>
-        /// <returns>A text approximate representation of the <see cref="T:System.TimeSpan" />.</returns>
-        public static string ToApproxFormat(this TimeSpan source)
+        /// <returns>A text approximate description of the <see cref="T:System.TimeSpan" />.</returns>
+        public static string ToApproxDescription(this TimeSpan source)
         {
             if (source.Days > 0)
                 return source.Days + " day".Pluralize(source.Days);
@@ -23,7 +23,10 @@ namespace ByteDev.Time
             if (source.Minutes > 0)
                 return source.Minutes + " minute".Pluralize(source.Minutes);
 
-            return source.Seconds + " second".Pluralize(source.Seconds);
+            if (source.Seconds < 1 || source.Seconds >= 10)
+                return source.Seconds + " second".Pluralize(source.Seconds);
+
+            return "A few seconds";
         }
     }
 }

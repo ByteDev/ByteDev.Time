@@ -7,56 +7,61 @@ namespace ByteDev.Time.UnitTests
     public class TimeSpanExtensionsTests
     {
         [TestFixture]
-        public class ToApproxFormat
+        public class ToApproxDescription
         {
-            [Test]
-            public void WhenDaysAreGreaterThanZero_ThenReturnDayString()
+            [TestCase(1, "1 day")]
+            [TestCase(2, "2 days")]
+            public void WhenDaysAreGreaterThanZero_ThenReturnDayString(int days, string expected)
             {
-                var sut = new TimeSpan(1, 2, 3, 4);
+                var sut = new TimeSpan(days, 2, 3, 4);
 
-                var result = sut.ToApproxFormat();
+                var result = sut.ToApproxDescription();
 
-                Assert.That(result, Is.EqualTo(sut.Days + " day"));
+                Assert.That(result, Is.EqualTo(expected));
             }
 
-            [Test]
-            public void WhenHoursAreGreaterThanZero_ThenReturnHoursString()
+            [TestCase(1, "1 hour")]
+            [TestCase(2, "2 hours")]
+            public void WhenHoursAreGreaterThanZero_ThenReturnHoursString(int hours, string expected)
             {
-                var sut = new TimeSpan(0, 2, 3, 4);
+                var sut = new TimeSpan(0, hours, 3, 4);
 
-                var result = sut.ToApproxFormat();
+                var result = sut.ToApproxDescription();
 
-                Assert.That(result, Is.EqualTo(sut.Hours + " hours"));
+                Assert.That(result, Is.EqualTo(expected));
             }
 
-            [Test]
-            public void WhenMinutesAreGreaterThanZero_ThenReturnMinutesString()
+            [TestCase(1, "1 minute")]
+            [TestCase(2, "2 minutes")]
+            public void WhenMinutesAreGreaterThanZero_ThenReturnMinutesString(int minutes, string expected)
             {
-                var sut = new TimeSpan(0, 0, 3, 4);
+                var sut = new TimeSpan(0, 0, minutes, 4);
 
-                var result = sut.ToApproxFormat();
+                var result = sut.ToApproxDescription();
 
-                Assert.That(result, Is.EqualTo(sut.Minutes + " minutes"));
+                Assert.That(result, Is.EqualTo(expected));
             }
 
-            [Test]
-            public void WhenSecondsAreGreaterThanZero_ThenReturnSecondsString()
+            [TestCase(0, "0 seconds")]
+            [TestCase(10, "10 seconds")]
+            public void WhenSecondsAreGreaterThanZero_ThenReturnSecondsString(int seconds, string expected)
             {
-                var sut = new TimeSpan(0, 0, 0, 4);
+                var sut = new TimeSpan(0, 0, 0, seconds);
 
-                var result = sut.ToApproxFormat();
+                var result = sut.ToApproxDescription();
 
-                Assert.That(result, Is.EqualTo(sut.Seconds + " seconds"));
+                Assert.That(result, Is.EqualTo(expected));
             }
 
-            [Test]
-            public void WhenSecondsAreZero_ThenReturnSecondsString()
+            [TestCase(1)]
+            [TestCase(9)]
+            public void WhenSecondsAreLessThan10_ThenReturnFewSecondsAgoString(int seconds)
             {
-                var sut = new TimeSpan(0, 0, 0, 0, 10);
+                var sut = new TimeSpan(0, 0, 0, seconds);
 
-                var result = sut.ToApproxFormat();
+                var result = sut.ToApproxDescription();
 
-                Assert.That(result, Is.EqualTo(sut.Seconds + " seconds"));
+                Assert.That(result, Is.EqualTo("A few seconds"));
             }
         }
     }

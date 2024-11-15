@@ -85,4 +85,4 @@ Extension methods:
 	- ToStringShort
 	- Length
 - TimeSpan
-	- ToApproxFormat
+	- ToApproxDescription

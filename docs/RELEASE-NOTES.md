@@ -1,13 +1,13 @@
 # Release Notes
 
-## 2.4.0 - ?
+## 3.0.0 - ?
 
 Breaking changes:
-- (None)
+- Renamed method `TimeSpanExtensions.ToApproxFormat` to `ToApproxDescription`.
 
 New features:
-- Added `DateTimeIsExtensions.IsUtc` method.
-- Added `DateTimeToDateTimeOffsetExtensions.ToDateTimeOffset` method.
+- Added method `DateTimeIsExtensions.IsUtc`.
+- Added method `DateTimeToDateTimeOffsetExtensions.ToDateTimeOffset`.
 
 Bug fixes / internal changes:
 - (None)
@@ -19,7 +19,7 @@ Breaking changes:
 
 New features:
 - Added constructor overload to `Year`.
-- Added `DateTimeProvider.NowByTimeZoneId` method.
+- Added method `DateTimeProvider.NowByTimeZoneId`.
 
 Bug fixes / internal changes:
 - (None)
@@ -30,8 +30,8 @@ Breaking changes:
 - (None)
 
 New features:
-- Added `DateTimeWithExtensions.WithDate` method.
-- Added `DateTimeWithExtensions.WithTime` method.
+- Added method `DateTimeWithExtensions.WithDate`.
+- Added method `DateTimeWithExtensions.WithTime`.
 
 Bug fixes / internal changes:
 - (None)
@@ -53,7 +53,7 @@ Breaking changes:
 - `TimeMax` class now in correct namespace (`ByteDev.Time`).
 
 New features:
-- Added `MonthExtensions.Length` method.
+- Added method `MonthExtensions.Length`.
 
 Bug fixes / internal changes:
 - (None)
@@ -64,16 +64,16 @@ Breaking changes:
 - (None)
 
 New features:
-- Added `DateTimeExtensions.EndOfDay` method.
-- Added `DateTimeExtensions.EndOfMonth` method.
-- Added `DateTimeExtensions.EndOfYear` method.
-- Added `DateTimeExtensions.EqualsDate` method.
-- Added `DateTimeExtensions.EqualsTime` method.
-- Added `DateTimeExtensions.WithHour` method.
-- Added `DateTimeExtensions.WithMinute` method.
-- Added `DateTimeExtensions.WithSecond` method.
-- Added `DateTimeExtensions.WithMillisecond` method.
-- Added `TimeMax`.
+- Added method `DateTimeExtensions.EndOfDay`.
+- Added method `DateTimeExtensions.EndOfMonth`.
+- Added method `DateTimeExtensions.EndOfYear`.
+- Added method `DateTimeExtensions.EqualsDate`.
+- Added method `DateTimeExtensions.EqualsTime`.
+- Added method `DateTimeExtensions.WithHour`.
+- Added method `DateTimeExtensions.WithMinute`.
+- Added method `DateTimeExtensions.WithSecond`.
+- Added method `DateTimeExtensions.WithMillisecond`.
+- Added class `TimeMax`.
 
 Bug fixes / internal changes:
 - Updated nuspec details.
